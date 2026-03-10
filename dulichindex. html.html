@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du Lịch Huế</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+background:#f8f5ff;
+color:#333;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:linear-gradient(90deg,#6a0dad,#9b30ff);
+color:white;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+height:90vh;
+background:linear-gradient(rgba(75,0,130,0.6),rgba(75,0,130,0.6)),
+url("https://motogo.vn/wp-content/uploads/2023/10/dai-noi-kinh-thanh-hue.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+header h1{
+font-size:70px;
+animation:slideDown 1.5s;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:white;
+color:#6a0dad;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+margin-top:20px;
+}
+
+/* SECTION */
+
+section{
+padding:70px 10%;
+text-align:center;
+}
+
+h2{
+margin-bottom:40px;
+color:#6a0dad;
+}
+
+/* CARDS */
+
+.grid{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:white;
+width:300px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(106,13,173,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px 0;
+}
+
+.card p{
+padding:0 10px 10px;
+}
+
+/* STARS */
+
+.star{
+font-size:20px;
+color:gold;
+cursor:pointer;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FORM */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input,select,textarea{
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px;
+background:#6a0dad;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* MAP */
+
+.map iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:10px;
+}
+
+/* BACK BUTTON */
+
+#homeBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#6a0dad;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:50px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#6a0dad;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@keyframes slideDown{
+from{transform:translateY(-50px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<nav>
+<div class="logo">Du Lịch Huế</div>
+<ul>
+<li><a href="#top">Trang chủ</a></li>
+<li><a href="#places">Địa điểm</a></li>
+<li><a href="#food">Ẩm thực</a></li>
+<li><a href="#culture">Văn hóa</a></li>
+<li><a href="#map">Bản đồ</a></li>
+<li><a href="#tour">Đặt tour</a></li>
+</ul>
+</nav>
+
+<header>
+<h1>KHÁM PHÁ VẺ ĐẸP CỐ ĐÔ HUẾ</h1>
+<p>Vẻ đẹp mộng mơ của di sản Việt Nam</p>
+<a href="#tour" class="btn">Đặt tour ngay</a>
+</header>
+
+<section id="places">
+<h2>Địa điểm nổi bật</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://bazantravel.com/cdn/medias/uploads/70/70246-gioi-thieu-hue-700x408.jpg">
+<h3>Đại Nội Huế</h3>
+<p>Di sản văn hóa thế giới.</p>
+</div>
+
+<div class="card">
+<img src="https://atypikvietnam.com/wp-content/uploads/2022/04/pagode-de-la-Dame-c%C3%A9leste-%E2%80%93-Thien-Mu.jpg">
+<h3>Chùa Thiên Mụ</h3>
+<p>Biểu tượng tâm linh Huế.</p>
+</div>
+<div class="card">
+<img src="https://huedaytour.com/wp-content/uploads/khai-dinh-tomb-3-768x431.jpg">
+<h3>Lăng Khải Định</h3>
+<p>Biểu tượng kiến trúc độc đáo.</p>
+</div>
+
+<div class="card">
+<img src="https://huedaytour.com/wp-content/uploads/minh-mang-tomb-hien-duc-gate.jpg">
+<h3>Lăng Minh Mạng</h3>
+<p>Khu lăng tẩm đẹp, hài hòa với thiên nhiên.</p>
+</div>
+
+<div class="card">
+<img src="https://huedaytour.com/wp-content/uploads/tu-duc-tomb_2.jpg">
+<h3>Lăng Tự Đức</h3>
+<p>Không gian thơ mộng, yên bình.</p>
+</div>
+
+<div class="card">
+<img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476196Ttk/anh-mo-ta.png">
+<h3>Cầu Trường Tiền</h3>
+<p>Biểu tượng nổi tiếng bắc qua sông Hương.</p>
+</div>
+
+<div class="card">
+<img src="https://thuyenronghue.com/wp-content/uploads/2022/08/flycam-huecity.jpg">
+<h3>Sông Hương</h3>
+<p>Dòng sông thơ mộng gắn liền với Huế.</p>
+</div>
+
+<div class="card">
+<img src="https://statics.vinpearl.com/doi-vong-canh-hue-1_1690374854.jpg">
+<h3>Đồi Vọng Cảnh</h3>
+<p>Nơi ngắm toàn cảnh sông Hương tuyệt đẹp.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vinwonders.com/production/bien-thuan-an-hue-4.jpg">
+<h3>Biển Thuận An</h3>
+<p>Bãi biển nổi tiếng gần trung tâm Huế.</p>
+</div>
+</div>
+
+</section>
+
+<section id="food">
+
+<h2>Ẩm Thực Huế</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://cdn.hanoijourney.com/wp-content/uploads/2017/06/image2-3.jpg">
+<h3>Bún Bò Huế</h3>
+<p>Niềm tự hào ẩm thực của Cố đô.</p>
+</div>
+
+<div class="card">
+<img src="https://banhbachi.com/wp-content/uploads/2021/01/62A9802-1-1024x683.jpg">
+<h3>Bánh Huế</h3>
+<p>Vẻ đẹp tinh tế trong ẩm thực Huế.</p>
+</div>
+
+<div class="card">
+<img src="https://thanhphohue.com/wp-content/uploads/2022/09/com_hen_hue_08-768x512.jpg">
+<h3>Cơm Hến</h3>
+<p>Món ăn dân dã riêng của Huế.</p>
+</div>
+
+<div class="card">
+<img src="https://statics.vinpearl.com/banh-ep-hue-1_1628480877_1680010166.jpg">
+<h3>Bánh Ép</h3>
+<p>Món ăn thân thuộc của Huế.</p>
+</div>
+
+<div class="card">
+<img src="https://laque.vn/wp-content/uploads/2022/07/che-hue-laquevn-0-1024x587.jpg">
+<h3>Chè Huế</h3>
+<p>Sắc ngọt dịu dàng của ẩm thực Cố đô.</p>
+</div>
+
+<div class="card">
+<img src="https://nongsandungha.com/wp-content/uploads/2022/09/me-xung-3.jpg">
+<h3>Mè Xửng</h3>
+<p>Món quà ngọt ngào của Cố đô.</p>
+</div>
+</div>
+
+</section>
+<section id="culture">
+
+<h2>Văn Hóa Huế</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/2/1/anh-7-1675211877542-16752118776232027728854.jpg">
+<h3>Nhã Nhạc Cung Đình</h3>
+<p>Di sản văn hóa phi vật thể được UNESCO công nhận.</p>
+</div>
+
+<div class="card">
+<img src="https://laque.vn/wp-content/uploads/2022/07/ao-dai-hue-4-jpg.webp">
+<h3>Áo Dài Huế</h3>
+<p>Trang phục truyền thống dịu dàng, thanh lịch.</p>
+</div>
+
+<div class="card">
+<img src="https://image.vietnamnews.vn/uploadvnnews/Article/2017/12/19/1-festival-hue31355844PM.jpg">
+<h3>Lễ Hội Huế</h3>
+<p>Festival Huế nổi tiếng với nhiều hoạt động văn hóa đặc sắc.</p>
+</div>
+
+<div class="card">
+<img src="https://grouptourvietnam.com/wp-content/uploads/2018/04/hue-dinner-cruise-on.jpg">
+<h3>Ca Huế Trên Sông Hương</h3>
+<p>Loại hình nghệ thuật truyền thống đặc sắc của cố đô.</p>
+</div>
+
+
+<div class="card">
+<img src="https://phuotvivu.com/blog/wp-content/uploads/2021/12/lam-huong-thuy-xuan-o-hue.jpg">
+<h3>Làng Nghề Truyền Thống Huế</h3>
+<p>Nơi gìn giữ, lưu truyền các truyền thống lâu đời.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="map">
+
+<h2>Bản Đồ Huế</h2>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=hue%20vietnam&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<section id="tour">
+
+<h2>Đăng ký tour</h2>
+
+<form>
+
+<input type="text" placeholder="Họ và tên" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Số điện thoại" required>
+
+<select required>
+
+<option>Lựa chọn</option>
+<option>Tour tham quan</option>
+<option>Tour ẩm thực</option>
+<option>Tour văn hóa</option>
+
+</select>
+
+<textarea placeholder="Ghi chú"></textarea>
+
+<button>Đăng ký</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Du lịch Huế</p>
+
+<p>Lượt truy cập: <span id="visit">0</span></p>
+
+</footer>
+
+<button id="homeBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+
+
+function scrollToTop(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+let visit=localStorage.getItem("visit");
+
+if(visit){
+visit++;
+}else{
+visit=1;
+}
+
+localStorage.setItem("visit",visit);
+
+document.getElementById("visit").innerText=visit;
+
+</script>
+
+</body>
+</html>
